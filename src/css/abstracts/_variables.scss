@@ -2,6 +2,7 @@
 $primary-color: #ff99cc;  
 $secondary-color: #9999ff; 
 $text-color: #333;
+$menu-text-color: #000000;
 
 // Typography
 $font-primary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -21,3 +22,9 @@ $background-pattern:
   linear-gradient(90deg, transparent 19px, rgba(255, 255, 255, 0.2) 1px);
   
 $background-size: 20px 20px; // Grid size
+
+// Darker versions for menu
+$menu-bg: darken($primary-color, 10%);  
+$menu-border: darken($primary-color, 20%); 
+$menu-text: $menu-text-color;
+$menu-hover: darken($secondary-color, 20%);

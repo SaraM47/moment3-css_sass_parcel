@@ -1,0 +1,15 @@
+// Primary colors from color palette
+$primary-color: #ff99cc;  
+$secondary-color: #9999ff; 
+$text-color: #333;
+
+// Gradient background 
+$gradient-background: linear-gradient(to bottom, $primary-color 0%, $secondary-color 100%) no-repeat;
+
+// White grid pattern 
+$background-pattern: 
+  linear-gradient(transparent 19px, rgba(255, 255, 255, 0.2) 1px), 
+  linear-gradient(90deg, transparent 19px, rgba(255, 255, 255, 0.2) 1px);
+  
+
+$background-size: 20px 20px; // Grid size

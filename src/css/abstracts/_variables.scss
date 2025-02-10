@@ -33,3 +33,19 @@ $menu-hover: lighten($secondary-color, 10%);
 $content-bg: #ffffff;  
 $heading-bg: lighten($secondary-color, 5%);
 $border-radius: 20px;
+
+// Light theme  (standard)
+$lightTheme: true;
+
+// Dark theme 
+$darkTheme: false;
+$dark-bg: #2a0730;
+$dark-text: #f1e1ff;
+$dark-content-bg: darken($secondary-color, 30%);
+$dark-heading-bg: darken($secondary-color, 20%);
+
+// Dark theme for the menu 
+$menu-bg-dark: darken($primary-color, 30%);
+$menu-text-dark: #f1e1ff;
+$menu-border-dark: darken($primary-color, 40%);
+$menu-hover-dark: lighten($secondary-color, 20%);

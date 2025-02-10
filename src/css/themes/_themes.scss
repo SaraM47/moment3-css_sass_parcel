@@ -18,12 +18,12 @@ $darkTheme: false;  // Dark theme (when it's active)
         }
 
         main, section {
-            background: variables.$dark-content-bg;
+            background: darken(variables.$dark-content-bg, 10%);
         }
 
         h1, h2 {
-            background: variables.$dark-heading-bg;
-            color: variables.$dark-text;
+            background: darken(variables.$dark-heading-bg, 5%);
+            color: lighten(variables.$dark-text, 15%);
         }
 
         p, ul { 
@@ -31,14 +31,14 @@ $darkTheme: false;  // Dark theme (when it's active)
         }
 
         nav {
-            background: variables.$menu-bg-dark;
-            border: 2px solid variables.$menu-border-dark;
+            background: darken(variables.$menu-bg-dark, 10%);
+            border: 2px solid darken(variables.$menu-border-dark, 10%);
         }
 
         nav a {
-            color: variables.$menu-text-dark;
+            color: lighten(variables.$menu-text-dark, 15%);
             &:hover {
-                color: variables.$menu-hover-dark;
+                color: lighten(variables.$menu-hover-dark, 15%);
             }
         }
     }

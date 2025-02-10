@@ -31,3 +31,27 @@ p, ul {
     padding: 10px 20px;
     color: variables.$text-color;
 }
+
+// Responsive design for menu and context 
+@media (max-width: 768px) {
+    main {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    section {
+        width: 90%;
+        padding: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

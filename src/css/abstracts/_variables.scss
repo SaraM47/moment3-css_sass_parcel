@@ -49,3 +49,10 @@ $menu-bg-dark: darken($primary-color, 30%);
 $menu-text-dark: #f1e1ff;
 $menu-border-dark: darken($primary-color, 40%);
 $menu-hover-dark: lighten($secondary-color, 20%);
+
+// Button colors
+$button-bg: $menu-bg; 
+$button-text: $menu-text;
+$button-border: $menu-border;
+$button-hover-bg: $menu-hover;
+$button-hover-text: #fff;

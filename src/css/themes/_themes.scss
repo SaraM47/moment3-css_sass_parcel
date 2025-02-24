@@ -1,45 +1,72 @@
 @use "../abstracts/variables";
 
-$lightTheme: true;  // Light theme (standard) 
-$darkTheme: false;  // Dark theme (when it's active)
-
 
 @media (prefers-color-scheme: dark) {
-    @if $darkTheme {
-        body {
-            background: 
-                variables.$gradient-background, 
-                variables.$background-pattern,  
-                linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-                variables.$dark-bg;  // Dark background far back so it doesn't replace the gradient
+    body {
+        background: 
+            variables.$gradient-background, 
+            variables.$background-pattern,  
+            linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+            variables.$dark-bg;
 
-            color: variables.$dark-text;
+        color: variables.$dark-text;
+    }
+
+    main, section {
+        background: darken(variables.$dark-content-bg, 10%);
+    }
+
+    h1, h2 {
+        background: darken(variables.$dark-heading-bg, 5%);
+        color: lighten(variables.$dark-text, 15%);
+    }
+
+    p, ul { 
+        color: variables.$dark-text;
+    }
+
+    nav {
+        background: darken(variables.$menu-bg-dark, 10%);
+        border: 2px solid darken(variables.$menu-border-dark, 10%);
+    }
+
+    nav a {
+        color: lighten(variables.$menu-text-dark, 15%);
+        &:hover {
+            color: lighten(variables.$menu-hover-dark, 15%);
         }
+    }
+}
 
-        main, section {
-            background: darken(variables.$dark-content-bg, 10%);
-        }
+@media (prefers-color-scheme: light) {
+    body {
+        background: variables.$content-bg;
+        color: variables.$text-color;
+    }
 
-        h1, h2 {
-            background: darken(variables.$dark-heading-bg, 5%);
-            color: lighten(variables.$dark-text, 15%);
-        }
+    main, section {
+        background: variables.$content-bg;
+    }
 
-        p, ul { 
-            color: variables.$dark-text;
-        }
+    h1, h2 {
+        background: variables.$heading-bg;
+        color: variables.$text-color;
+    }
 
-        nav {
-            background: darken(variables.$menu-bg-dark, 10%);
-            border: 2px solid darken(variables.$menu-border-dark, 10%);
-        }
+    p, ul { 
+        color: variables.$text-color;
+    }
 
-        nav a {
-            color: lighten(variables.$menu-text-dark, 15%);
-            &:hover {
-                color: lighten(variables.$menu-hover-dark, 15%);
-            }
+    nav {
+        background: variables.$menu-bg;
+        border: 2px solid variables.$menu-border;
+    }
+
+    nav a {
+        color: variables.$menu-text;
+        &:hover {
+            color: variables.$menu-hover;
         }
     }
 }

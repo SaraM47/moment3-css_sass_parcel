@@ -38,10 +38,16 @@
         }
     }
 }
-
+// Default: Light theme (if no dark theme is applied)
 @media (prefers-color-scheme: light) {
     body {
-        background: variables.$content-bg;
+        background: 
+            variables.$gradient-background, 
+            variables.$background-pattern,  
+            linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+            variables.$content-bg;
+
         color: variables.$text-color;
     }
 

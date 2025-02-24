@@ -1,6 +1,6 @@
 @use "../abstracts/variables";
 
-
+// If no dark theme is applied - Default: generel styling for the light theme 
 @media (prefers-color-scheme: dark) {
     body {
         background: 
@@ -38,41 +38,4 @@
         }
     }
 }
-// Default: Light theme (if no dark theme is applied)
-@media (prefers-color-scheme: light) {
-    body {
-        background: 
-            variables.$gradient-background, 
-            variables.$background-pattern,  
-            linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-            variables.$content-bg;
 
-        color: variables.$text-color;
-    }
-
-    main, section {
-        background: variables.$content-bg;
-    }
-
-    h1, h2 {
-        background: variables.$heading-bg;
-        color: variables.$text-color;
-    }
-
-    p, ul { 
-        color: variables.$text-color;
-    }
-
-    nav {
-        background: variables.$menu-bg;
-        border: 2px solid variables.$menu-border;
-    }
-
-    nav a {
-        color: variables.$menu-text;
-        &:hover {
-            color: variables.$menu-hover;
-        }
-    }
-}
